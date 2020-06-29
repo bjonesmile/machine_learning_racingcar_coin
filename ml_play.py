@@ -197,13 +197,13 @@ class MLPlay:
                         else:
                             return ["MOVE_LEFT"]
                 if(isMoveRight):
-                    if self.car_pos[0]+20 < 575:
+                    if self.car_pos[0]+20 > 590:
                         self.last_cmd = "BRAKE"
                         return ["MOVE_LEFT", "BRAKE"]
                     self.last_cmd = "MOVE_RIGHT"
                     return ["MOVE_RIGHT", "SPEED"]
                 if(isMoveLeft):
-                    if self.car_pos[0]-20 < 45:
+                    if self.car_pos[0]-20 < 30:
                         self.last_cmd = "BRAKE"
                         return ["MOVE_RIGHT", "BRAKE"]
                     self.last_cmd = "MOVE_LEFT"
